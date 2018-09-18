@@ -26,31 +26,41 @@
 
         <legend>Contact Information</legend>
 
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="user_name" value="" placeholder="Required" required>
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="user_name" value="" placeholder="Required" required>
-
-        <label for="telephone">Phone Number</label>
-        <input type="tel" id="telephone" name="user_telephone" value="">
-
-        <label for="address-street">Street Address</label>
-        <input type="text" id="address-street" name="user_street_address" value="">
-
-        <label for="address-city">City</label>
-        <input type="text" id="address-city" name="user_city_address" value="">
-
-        <label for="address-state">State</label>
-        <select id="address-state" name="user_state">
-          <option disabled selected>Choose State</option>
-          <option class="darker" value="florida">Florida</option>
-          <option class="darker" value="california">California</option>
-        </select>
-
-        <label for="address-zipcode">Zip Code</label>
-        <input type="number" id="address-zipcode" name="user_zipcode_address" value="">
-      </fieldset>
+        <ul>
+          <li>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="user_name" placeholder="Required" required>
+          </li>
+          <li>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="user_name" placeholder="Required" required>
+          </li>
+          <li>
+            <label for="telephone">Phone Number</label>
+            <input type="tel" id="telephone" name="user_telephone">
+          </li>
+          <li>
+            <label for="address-street">Street Address</label>
+            <input type="text" id="address-street" name="user_street_address">
+          </li>
+          <li>
+            <label for="address-city">City</label>
+            <input type="text" id="address-city" name="user_city_address">
+          </li>
+          <li>
+            <label for="address-state">State</label>
+            <select id="address-state" name="user_state">
+              <option disabled selected>Choose State</option>
+              <option class="darker" value="florida">Florida</option>
+              <option class="darker" value="california">California</option>
+            </select>
+          </li>
+          <li>
+            <label for="address-zipcode">Zip Code</label>
+            <input type="number" id="address-zipcode" name="user_zipcode_address">
+          </li>
+        </fieldset>
+      </ul>
 
       <div class="border-top width"></div>
 
@@ -59,29 +69,29 @@
         <div class="newsletter-block">
           <label>Select the newsletters you would like to receive</label><br>
 
-          <input type="checkbox" id="html-news" name="user_newsletter" value="">
+          <input type="checkbox" id="html-news" name="user_newsletter">
           <label class="" for="html-news">HTML News</label><br>
 
-          <input type="checkbox" id="css-news" name="user_newsletter" value="">
+          <input type="checkbox" id="css-news" name="user_newsletter">
           <label class="" for="css-news">CSS News</label><br>
 
-          <input type="checkbox" id="javascript-news" name="user_newsletter" value="">
+          <input type="checkbox" id="javascript-news" name="user_newsletter">
           <label class="" for="javascript-news">Javascript News</label><br>
         </div>
 
         <div class="newsletter-block">
           <label>Newsletter format</label><br>
 
-          <input type="radio" id="html" name="user_format" value="">
+          <input type="radio" id="html" name="user_format">
           <label class="" for="html">HTML</label><br>
 
-          <input type="radio" id="plain-text" name="user_format" value="">
+          <input type="radio" id="plain-text" name="user_format">
           <label class="" for="plain-text">Plain text</label><br>
         </div>
 
         <div class="newsletter-block">
           <label for="textarea">Other topics you'd like to hear about</label><br>
-          <textarea id="textarea" name="name" rows="8" cols="80"></textarea>
+          <textarea id="textarea" name="name"></textarea>
         </div>
       </fieldset>
 
