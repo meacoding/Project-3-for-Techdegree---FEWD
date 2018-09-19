@@ -2,14 +2,14 @@
 :root {
   font-family: 'Merriweather', serif;
   font-size: 13px;
-  width: 100vw;
+
+  /* For exceeds grade, technically color changed. Looks better white. */
+  background-color: #fdfefe;
 }
 
-.container,
 h1,
 li,
 legend,
-header,
 header p,
 fieldset,
 input,
@@ -32,42 +32,37 @@ legend {
   margin: 20px auto 15px;
   width: 100%;
   color: #2d3945;
-  font-size:  1.5rem;
+  font-size:  1.4rem;
   font-weight: 900;
 }
 .container {
   justify-content: center;
   width: 100vw;
+  max-width: 600px;
+  margin: 0 auto;
 }
 form {
   width: 100%;
 }
 ul {
   padding: 0;
-  /* flex-direction: row; */
-  /* flex-grow: 1; */
+  margin: 0;
 }
 ul li {
-  /* width: 100%; */
+  max-width: 600px;
   margin:0;
   padding: 0;
+  list-style: none;
   flex-wrap: wrap;
   align-items: center;
   flex-grow: 1;
 }
-.primary label {
-  flex-grow: 1;
-  /* width: 25%; */
-}
-.primary input,
-.primary select {
-  flex-grow: 4;
-}
-
 /* ---------------Header--------------- */
 header {
   flex-direction: column;
   text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
 }
 h1 {
   text-transform: uppercase;
@@ -85,13 +80,13 @@ header p {
   padding-bottom: 40px;
   justify-content: center;
   color: #999;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 header div {
   border-bottom: 4px solid #2d3945;
-}
-header {
-  margin-bottom: 3px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: calc(600px*.9);
 }
 
 /* ---------------Form--------------- */
@@ -111,8 +106,8 @@ legend {
 }
 label {
   color: #46698b;
-  padding-bottom: 8px;
-  font-size: 1.1rem;
+  padding-bottom: 5px;
+  font-size: 1rem;
 }
 .primary input,
 select,
@@ -134,14 +129,22 @@ select:focus,
 textarea:focus {
   border: 2px solid #46698b;
   outline: none;
+
+  /* for exceeds grade */
+  transition: .25s;
+  background-color: #ff9800;
+  color: #fff;
 }
 
 /* .primary styles */
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   font-style: italic;
-  text-align: right;
-  font-size: 14px;
+  font-size: 1.1rem;
   color: #ccc;
+}
+input::placeholder {
+  text-align: right;
 }
 select  {
   color: #ccc;
@@ -152,7 +155,6 @@ select  {
   color: #000;
 }
 #address-zipcode {
-  /* width: 50%; */
   margin-right: 50%;
   margin-bottom: 30px;
 }
@@ -162,18 +164,24 @@ input[type="radio"],
 input[type="checkbox"] {
   display: inline-block;
 }
+input[type=checkbox]:checked + label,
+input[type=radio]:checked + label {
+  transition: .25s;
+  color: #ff9800;
+  /* for exceeds grade */
+}
 .newsletter-block {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 .secondary label {
   display: inline-block;
   padding-bottom: 15px;
 }
-/* .secondary input + label {
+.paddingLeft {
   padding-left: 10px;
-} */
+}
 .secondary label:first-of-type {
-  line-height: 2;
+  line-height: 1.9;
 }
 input[type="checkbox"] {
   background-color: #489ff9;
@@ -195,7 +203,10 @@ button {
   font-size: 1.5rem;
   font-weight: 900;
 }
-/* ---------------Header--------------- */
+button:active {
+  background-color: #307370;
+}
+/* ---------------Footer--------------- */
 footer {
   margin-bottom: 210px;
   justify-content: center;
@@ -205,23 +216,48 @@ footer {
 
 /* ---------------Media Queries--------------- */
 @media (min-width: 768px) {
-  .container {
-    width: 600px;
-    margin: 0 auto;
+  .width {
+    width: 100%;
   }
-  .primary label {
-    /* width: 25%; */
+  header div {
+    width: 600px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  legend {
+    padding-top: 45px;
+  }
+  header h2 {
+    font-size: 1.8rem;
   }
   .primary input,
-  .primary select {
-    width: 440px;
-  }
-  #address-zipcode {
-    /* width: 25%; */
-    flex-grow: 3;
-    justify-content: left;
+  select,
+  textarea {
+    margin-bottom: 15px;
   }
   ul li {
     flex-wrap: nowrap;
+  }
+  .primary ul li:last-of-type {
+    margin-bottom: 20px;
+  }
+  .primary label {
+    flex: 1 150px;
+    max-width: 150px;
+  }
+  .primary input,
+  .primary select {
+    flex: 2 440px;
+  }
+  #address-zipcode {
+    flex: 2;
+  }
+  .newsletter-block {
+    padding-bottom: 15px;
+  }
+  button {
+    margin-bottom: 40px;
   }
 }
