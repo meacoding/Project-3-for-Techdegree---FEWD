@@ -1,6 +1,6 @@
 /* Global Layout Set-up */
 :root {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-size: 13px;
 
   /* For exceeds grade, technically color changed. Looks better white. */
@@ -32,7 +32,7 @@ legend {
   margin: 20px auto 15px;
   width: 100%;
   color: #2d3945;
-  font-size:  1.4rem;
+  font-size: 1.4rem;
   font-weight: 900;
 }
 .container {
@@ -50,7 +50,7 @@ ul {
 }
 ul li {
   max-width: 600px;
-  margin:0;
+  margin: 0;
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
@@ -86,7 +86,7 @@ header div {
   border-bottom: 4px solid #2d3945;
   margin: 0 auto;
   width: 90%;
-  max-width: calc(600px*.9);
+  max-width: calc(600px * 0.9);
 }
 
 /* ---------------Form--------------- */
@@ -131,7 +131,7 @@ textarea:focus {
   outline: none;
 
   /* for exceeds grade */
-  transition: .25s;
+  transition: 0.25s;
   background-color: #ff9800;
   color: #fff;
 }
@@ -146,7 +146,7 @@ textarea::placeholder {
 input::placeholder {
   text-align: right;
 }
-select  {
+select {
   color: #ccc;
   font-size: 1rem;
   padding: 0 20px;
@@ -164,9 +164,9 @@ input[type="radio"],
 input[type="checkbox"] {
   display: inline-block;
 }
-input[type=checkbox]:checked + label,
-input[type=radio]:checked + label {
-  transition: .25s;
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  transition: 0.25s;
   color: #ff9800;
   /* for exceeds grade */
 }
