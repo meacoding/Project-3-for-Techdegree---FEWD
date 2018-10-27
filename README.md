@@ -2,6 +2,6 @@
 
 Front-End Web Development
 
-Build webpage with forms from a mockup.
+Build webpage with forms and CSS flexbox from a mockup
 
 Mockup provided.
