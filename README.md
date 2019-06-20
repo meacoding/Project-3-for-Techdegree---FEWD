@@ -15,7 +15,7 @@ To build an HTML form using CSS flexbox for the Treehouse Techdegree FEWD progra
 
 ## What I did
 
-The webpage is mobile-first responsive ans styled with CSS flexbox. Matches provided mockup.
+The webpage is mobile-first responsive and styled with CSS flexbox. Matches provided mockup.
  
 ## Backstory
 
